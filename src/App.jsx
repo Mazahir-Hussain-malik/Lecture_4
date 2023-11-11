@@ -3,7 +3,7 @@ import React from "react";
 const App = () => {
   let count = 1;
   let name = "";
-  function updateCount() {
+  function addCount() {
     count = count + 1;
     console.log(`count value is ${count}`);
   }
@@ -15,9 +15,10 @@ const App = () => {
   return (
     <>
       <div>
-        <h2>name is {count}</h2>
+        <h2>{count}</h2>
+        <button onClick={addCount}>ADD COUNT</button>
         <input type="text" value={name} onChange={handleInput} />
-        <button onClick={updateCount}>Update name</button>
+        <button>Update name</button>
         {name}
       </div>
     </>
